@@ -115,6 +115,23 @@ create mode 100644
 "Git\344\275\277\347\224\250\345\222\214\347\256\241\347\220\206\344\273\213\347\273\215.md"
 
 ###git pull
+从远程服务器拉去更新内容。  
+例：  
+$ git pull  
+remote: Counting objects: 3, done.  
+remote: Compressing objects: 100% (1/1),  
+done.  
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0  
+Unpacking objects: 100% (3/3), done.  
+From https://github.com/zhangpoor/GitIntr  
+&nbsp;&nbsp;&nbsp;&nbsp;57f5480..4f2a64e  master     -> origin/master  
+Updating 57f5480..4f2a64e  
+Fast-forward  
+"Git\344\275\277\347\224\250\345\222\214\347\256\241\347\220\206\344\273\213\347\273\215.md" | 26 ++++++++++++++++++++++++--  
+1 file changed, 24 insertions(+), 2 deletions(-)
+
+
+
 ###git push
 将commit的内容，推送远程服务器。  
 例:  
