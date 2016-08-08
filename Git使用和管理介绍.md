@@ -50,11 +50,33 @@ Untracked files:
 在提交了若干更新之后，又或者克隆了某个项目，想回顾下提交历史，可以使用 git log 命令查看。  
 例：  
 $ git log  
-fatal: your current branch 'master' does not have any commits yet
+commit 57f5480272d37c420363e108db3ea815cc42dcd6  
+Author: zhangpoor <334521055@qq.com>  
+Date:   Mon Aug 8 20:42:10 2016 +0800  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提交完整文件  
+  
+commit b00f2b840d75aa96149231d915a4e818b203700c  
+Author: zhangpoor <334521055@qq.com>  
+Date:   Mon Aug 8 14:51:07 2016 +0800
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first commit
 
 ###git clone
+从远端服务器克隆一个仓库到本地。  
+例：  
+$ git clone https://github.com/zhangpoor/GitIntr test  
+Cloning into 'test'...  
+remote: Counting objects: 9, done.  
+remote: Compressing objects: 100% (9/9), done.  
+remote: Total 9 (delta 1), reused 8 (delta 0), pack-reused 0  
+Unpacking objects: 100% (9/9), done.  
+Checking connectivity... done.
 
 ###git checkout
+检出分支，并切换到该分支进行工作。
+例：  
+git checkout master
 
 ###git add  
 主要用于把我们要提交的文件的信息添加到索引库中。  
@@ -119,7 +141,7 @@ git checkout master
 git merge --no-ff develop  
 
 结果，develop的内容，合并到了master
-###git tag
+
 
 ##Git可视化工具SourceTree
 
