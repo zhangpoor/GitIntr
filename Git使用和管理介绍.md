@@ -104,7 +104,7 @@ Untracked files:
 &nbsp;&nbsp;&nbsp;&nbsp;(use "git add <file>..." to include in what will be committed)
 
 &nbsp;&nbsp;&nbsp;&nbsp;001.jpg   
-
+aaaa
 ###git commit
 提交到本地仓库，一般要在 git add，git rm，git mv后使用 
 例：
@@ -149,18 +149,74 @@ To https://github.com/zhangpoor/GitIntr.git
 
 ###git reset
 ###git branch
+git branch branchname  创建一个分支,需要注意，此处只是创建分支，不进行分支切换  
+例：git branch block001  
+git branch   不带参数,列出本地已经存在的分支，并且在当前分支的前面加“*”号标记  
+例：  
+$ git branch  
+&nbsp;&nbsp;block001  
+* master  
+  
+git branch -r 列出远程分支    
+git branch -a 列出本地分支和远程分支  
+git branch -m | -M oldbranch newbranch 重命名分支   
+git branch -d | -D branchname 删除branchname分支  
+git branch -d -r branchname 删除远程branchname分支
+
+
 ###git merge  
 git merge的基本用法为把一个分支或或某个commit的修改合并现在的分支上。  
 例：  
 ＃ 切换到Master分支  
 git checkout master  
 ＃ 对Develop分支进行合并  
-git merge --no-ff develop  
+git merge --no-ff block001 
+ 
 
-结果，develop的内容，合并到了master
+结果，block001的内容，合并到了master
 
 
 ##Git可视化工具SourceTree
+SourceTree 是 Windows 和Mac OS X 下免费的 Git 和 Hg 客户端，同时也是Mercurial和Subversion版本控制系统工具。支持创建、克隆、提交、push、pull 和合并等操作。  
+SourceTree拥有一个精美简洁的界面，大大简化了开发者与代码库之间的Git操作方式，这对于那些不熟悉Git命令的开发者来说非常实用。  
+SourceTree拥有完整的Git功能：  
+通过一个简单的用户界面即可使用所有的Git命令  
+通过一次单击，即可管理所有的Git库，无论是托管的还是本地的  
+通过一次单击，即可进行commit、push、pull、merge等操作  
+一些先进的功能，如补丁处理、rebase、shelve、cherry picking等  
+可以连接到你托管在Bitbucket、Stash、Microsoft TFS或GitHub中的代码库
+###下载地址
+<https://www.sourcetreeapp.com>  
+###创建仓库
+####添加本地仓库:  
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_001.png)  
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_002.png)  
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_003.png)
+####根据远程仓库创建仓库:  
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_004.png)  
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_005.png)  
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_006.png)  
+###基本界面
+####分支选择界面
+可以查看该分支下的提交历史
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_007.png) 
+####文件状态界面
+可用于提交更新内容
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_008.png) 
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_009.png) 
+####搜索界面
+可根据不同条件筛选提交记录查看节点
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_010.png) 
+####配置界面
+可以对sourcetree进行设置，如提交时候的用户名、忽略文件等。
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_011.png) 
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_012.png) 
+####文件提交的流程
+一般文件提交更新的流程为：  
+1.先拉去远程的更新内容  
+2.添加本地更新内容并提交（若有冲突，合并解决冲突）  
+3.推送前再次拉去远程的更新内容（推荐做法）  
+4.推送本次提交内容至远程服务器  
 
 
 ##常见问题处理
