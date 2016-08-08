@@ -9,6 +9,18 @@ Git是一个开源的分布式版本控制系统，可以有效、高速的处�
 
 
 ##Git的安装
+安装方法，在Mac OS系统下，直接开启终端，打git命令，就会弹出选项框。  
+&nbsp;&nbsp;&nbsp;&nbsp;1.安装命令行git。  
+&nbsp;&nbsp;&nbsp;&nbsp;2.安装xcode git插件。  
+&nbsp;&nbsp;&nbsp;&nbsp;3.退出。  
+  
+Windows操作系统下，偶没接触过，可以百度下，应该不麻烦。
+
+##一些准备
+去https://github.com网站上创建自己的账号。  
+创建自己的仓库可以进行练习用。  
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/prepare.png)
+
 
 ##Git基础命令使用
 ###git --help
@@ -39,21 +51,64 @@ Untracked files:
 例：  
 $ git log  
 fatal: your current branch 'master' does not have any commits yet
+
 ###git clone
+
 ###git checkout
+
 ###git add  
 主要用于把我们要提交的文件的信息添加到索引库中。  
 当我们使用git commit时，git将依据索引库中的内容来进行文件的提交。  
 git add <path>  
-例：  
+例:  
+git add Git使用和管理介绍.md  
+$ git status
+On branch master
 
-###git rm
-###git mv
-###git reset
+Initial commit
+
+Changes to be committed:  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(use "git rm --cached <file>..." to unstage)  
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new file:   "Git\344\275\277\347\224\250\345\222\214\347\256\241\347\220\206\344\273\213\347\273\215.md"
+
+Changes not staged for commit:  
+&nbsp;&nbsp;&nbsp;&nbsp;(use "git add <file>..." to update what will be committed)  
+&nbsp;&nbsp;&nbsp;&nbsp;(use "git checkout -- <file>..." to discard changes in working directory)
+
+&nbsp;&nbsp;&nbsp;&nbsp;modified:&nbsp;&nbsp;&nbsp;&nbsp;"Git\344\275\277\347\224\250\345\222\214\347\256\241\347\220\206\344\273\213\347\273\215.md"
+
+Untracked files:  
+&nbsp;&nbsp;&nbsp;&nbsp;(use "git add <file>..." to include in what will be committed)
+
+&nbsp;&nbsp;&nbsp;&nbsp;001.jpg   
+
 ###git commit
+提交到本地仓库，一般要在 git add，git rm，git mv后使用 
+例：
+$ git commit -m "first commit"  
+[master (root-commit) b00f2b8] first commit  
+1 file changed, 75 insertions(+)  
+create mode 100644  
+"Git\344\275\277\347\224\250\345\222\214\347\256\241\347\220\206\344\273\213\347\273\215.md"
+
 ###git pull
 ###git push
-###git diff
+将commit的内容，推送远程服务器。  
+例:  
+$ git push origin master  
+Username for 'https://github.com': zhangpoor  
+Password for 'https://zhangpoor@github.com':   
+Counting objects: 3, done.  
+Delta compression using up to 8 threads.  
+Compressing objects: 100% (3/3), done.  
+Writing objects: 100% (3/3), 1.50 KiB | 0 bytes/s, done.  
+Total 3 (delta 0), reused 0 (delta 0)  
+To https://github.com/zhangpoor/GitIntr.git  
+* [new branch]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;master -> master
+
+
+###git reset
 ###git branch
 ###git merge  
 git merge的基本用法为把一个分支或或某个commit的修改合并现在的分支上。  
@@ -72,4 +127,15 @@ git merge --no-ff develop
 ##常见问题处理
 
 
-##Git管理流程
+##App打包管理流程
+第二轮回归包之前统一在主开发分支上开发（部分比较大或者不确定的项目，单独建立分支，在第一轮回归测试之前，合并入主分支）。
+
+第二轮回归包发出之后开始建立封板分支，命名规则例：Block_4_3_2_20160719
+
+封板分支创建之后，要求修复的bug同步提交封板分支和主开发分支
+
+每两天将封板分支代码merge到主开发分支中去
+
+发布AppStore之后,将封板分支代码merge到主开发分支中去，打tag
+
+完毕
