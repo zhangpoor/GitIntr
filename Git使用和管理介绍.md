@@ -217,7 +217,12 @@ SourceTree拥有完整的Git功能：
 2.添加本地更新内容并提交（若有冲突，合并解决冲突）  
 3.推送前再次拉去远程的更新内容（推荐做法）  
 4.推送本次提交内容至远程服务器  
-
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_013.png) 
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_014.png) 
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_015.png) 
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_016.png)
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_017.png) 
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_018.png)
 
 ##常见问题处理
 
