@@ -1,5 +1,5 @@
 #Git使用和管理介绍
-
+aaaa
 Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。
 
 分布式相比于集中式的最大区别在于开发者可以提交到本地，每个开发者通过克隆（git clone），在本地机器上拷贝一个完整的Git仓库。
@@ -223,6 +223,20 @@ SourceTree拥有完整的Git功能：
 ![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_016.png)
 ![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_017.png) 
 ![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_018.png)
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_019.png)
+####创建分支
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_020.png)
+####合并分支
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_021.png)
+####重置修改
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_022.png)
+####一些其它操作
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_023.png) 
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_024.png)
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_025.png) 
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_026.png)
+![](/Users/zhangpoor/Desktop/Git使用和管理介绍/sourcetree/st_027.png)
+
 
 ##常见问题处理
 
